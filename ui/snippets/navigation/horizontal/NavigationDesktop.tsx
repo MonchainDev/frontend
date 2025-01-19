@@ -20,7 +20,7 @@ const NavigationDesktop = () => {
     <Box
       borderColor="divider"
       borderBottomWidth="1px"
-      zIndex={ 1 }
+      zIndex={ 10000 }
       position="relative"
       background="rgba(6,6,6,1)"
     >
