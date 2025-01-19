@@ -1,0 +1,37 @@
+.grid {
+    /*  */
+    --gap: 4px;
+    --line-offset: calc(var(--gap) / 2);
+    --line-thickness: 1px;
+    --line-color: #eee;
+
+    gap: var(--gap);
+    overflow: hidden;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 10px 64px 0px;
+}
+
+.grid__item {
+    /*  */
+    position: relative;
+}
+
+.grid__item::before, 
+.grid__item::after {
+   content: '';
+   position: absolute;
+   background-color: var(--line-color);
+   z-index: 1;
+}
+
+.grid__item::after {
+    inline-size: 100%;
+    block-size: var(--line-thickness);
+    inset-inline-start: 0;
+    inset-block-start: calc(var(--line-offset) * -1);
+}
+
+.grid__item::before {
+    inline-size: var(--line-thickness);
+    block-size: 100%;
+    inset-inline-start: calc(var(--line-offset) * -1);
+}

@@ -10,10 +10,10 @@ import Settings from './settings/Settings';
 import TopBarStats from './TopBarStats';
 
 const TopBar = () => {
-  const bgColor = useColorModeValue('gray.50', 'whiteAlpha.100');
+  const bgColor = useColorModeValue('transparent', 'whiteAlpha.100');
 
   return (
-    <Box bgColor={ bgColor }>
+    <Box bgColor={ bgColor } zIndex={ 2 } position="relative">
       <Flex
         py={ 2 }
         px={{ base: 3, lg: 6 }}

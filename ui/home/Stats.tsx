@@ -14,6 +14,8 @@ import IconSvg from 'ui/shared/IconSvg';
 import type { Props as StatsWidgetProps } from 'ui/shared/stats/StatsWidget';
 import StatsWidget from 'ui/shared/stats/StatsWidget';
 
+import styles from './Stats.module.css';
+
 const rollupFeature = config.features.rollup;
 
 const Stats = () => {
@@ -190,12 +192,16 @@ const Stats = () => {
   return (
     <Grid
       gridTemplateColumns="1fr 1fr"
-      gridGap={{ base: 1, lg: 2 }}
+      // gridGap={{ base: 1, lg: 2 }}
       flexBasis="50%"
       flexGrow={ 1 }
+      borderRadius={ 8 }
+      bgColor="gray.50"
+      className={ styles.grid }
     >
       { items.map((item, index) => (
         <StatsWidget
+          className={ styles.grid__item }
           key={ item.id }
           { ...item }
           isLoading={ isLoading }

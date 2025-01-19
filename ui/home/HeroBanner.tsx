@@ -3,39 +3,39 @@ import React from 'react';
 
 import config from 'configs/app';
 import RewardsButton from 'ui/rewards/RewardsButton';
-import AdBanner from 'ui/shared/ad/AdBanner';
+// import AdBanner from 'ui/shared/ad/AdBanner';
 import SearchBar from 'ui/snippets/searchBar/SearchBar';
 import UserProfileDesktop from 'ui/snippets/user/profile/UserProfileDesktop';
 import UserWalletDesktop from 'ui/snippets/user/wallet/UserWalletDesktop';
 
-const BACKGROUND_DEFAULT = 'radial-gradient(103.03% 103.03% at 0% 0%, rgba(183, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%), var(--chakra-colors-blue-400)';
-const TEXT_COLOR_DEFAULT = 'white';
+// const BACKGROUND_DEFAULT = 'radial-gradient(103.03% 103.03% at 0% 0%, rgba(183, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%), var(--chakra-colors-blue-400)';
+// const TEXT_COLOR_DEFAULT = 'white';
 const BORDER_DEFAULT = 'none';
 
 const HeroBanner = () => {
-  const background = useColorModeValue(
-    // light mode
-    config.UI.homepage.heroBanner?.background?.[0] ||
-    config.UI.homepage.plate.background ||
-    BACKGROUND_DEFAULT,
-    // dark mode
-    config.UI.homepage.heroBanner?.background?.[1] ||
-    config.UI.homepage.heroBanner?.background?.[0] ||
-    config.UI.homepage.plate.background ||
-    BACKGROUND_DEFAULT,
-  );
+  // const background = useColorModeValue(
+  //   // light mode
+  //   config.UI.homepage.heroBanner?.background?.[0] ||
+  //   config.UI.homepage.plate.background ||
+  //   BACKGROUND_DEFAULT,
+  //   // dark mode
+  //   config.UI.homepage.heroBanner?.background?.[1] ||
+  //   config.UI.homepage.heroBanner?.background?.[0] ||
+  //   config.UI.homepage.plate.background ||
+  //   BACKGROUND_DEFAULT,
+  // );
 
-  const textColor = useColorModeValue(
-    // light mode
-    config.UI.homepage.heroBanner?.text_color?.[0] ||
-    config.UI.homepage.plate.textColor ||
-    TEXT_COLOR_DEFAULT,
-    // dark mode
-    config.UI.homepage.heroBanner?.text_color?.[1] ||
-    config.UI.homepage.heroBanner?.text_color?.[0] ||
-    config.UI.homepage.plate.textColor ||
-    TEXT_COLOR_DEFAULT,
-  );
+  // const textColor = useColorModeValue(
+  //   // light mode
+  //   config.UI.homepage.heroBanner?.text_color?.[0] ||
+  //   config.UI.homepage.plate.textColor ||
+  //   TEXT_COLOR_DEFAULT,
+  //   // dark mode
+  //   config.UI.homepage.heroBanner?.text_color?.[1] ||
+  //   config.UI.homepage.heroBanner?.text_color?.[0] ||
+  //   config.UI.homepage.plate.textColor ||
+  //   TEXT_COLOR_DEFAULT,
+  // );
 
   const border = useColorModeValue(
     config.UI.homepage.heroBanner?.border?.[0] || BORDER_DEFAULT,
@@ -45,26 +45,33 @@ const HeroBanner = () => {
   return (
     <Flex
       w="100%"
-      background={ background }
+      // background={ background }
       border={ border }
       borderRadius="md"
       p={{ base: 4, lg: 8 }}
+      paddingX={{ base: 40, lg: 40 }}
       columnGap={ 8 }
       alignItems="center"
     >
       <Box flexGrow={ 1 }>
-        <Flex mb={{ base: 2, lg: 3 }} justifyContent="space-between" alignItems="center" columnGap={ 2 }>
+        <Flex mb={{ base: 6, lg: 9 }} justifyContent="center" alignItems="center" columnGap={ 2 }>
           <Heading
             as="h1"
-            fontSize={{ base: '18px', lg: '30px' }}
+            fontSize={{ base: '40px', lg: '40px' }}
             lineHeight={{ base: '24px', lg: '36px' }}
-            fontWeight={{ base: 500, lg: 700 }}
-            color={ textColor }
+            fontWeight={{ base: 500, lg: 500 }}
+            backgroundClip="text"
+            // color={ textColor }
+            style={{
+              background: `-webkit-linear-gradient(0deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%)`,
+              WebkitTextFillColor: 'transparent',
+              WebkitBackgroundClip: 'text',
+            }}
           >
             {
               config.meta.seo.enhancedDataEnabled ?
                 `${ config.chain.name } blockchain explorer` :
-                `${ config.chain.name } explorer`
+                `Explore ${ config.chain.name }`
             }
           </Heading>
           { config.UI.navigation.layout === 'vertical' && (
@@ -79,7 +86,7 @@ const HeroBanner = () => {
         </Flex>
         <SearchBar isHomepage/>
       </Box>
-      <AdBanner platform="mobile" w="fit-content" flexShrink={ 0 } borderRadius="md" overflow="hidden" display={{ base: 'none', lg: 'block ' }}/>
+      { /* <AdBanner platform="mobile" w="fit-content" flexShrink={ 0 } borderRadius="md" overflow="hidden" display={{ base: 'none', lg: 'block ' }}/> */ }
     </Flex>
   );
 };

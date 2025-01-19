@@ -41,7 +41,7 @@ const NavLinkGroup = ({ item }: Props) => {
               py={ 1.5 }
               fontSize="sm"
               lineHeight={ 5 }
-              fontWeight={ 500 }
+              fontWeight={ 600 }
               cursor="pointer"
               color={ isOpen ? colors.text.hover : color }
               _hover={{ color: colors.text.hover }}

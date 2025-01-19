@@ -97,7 +97,13 @@ const LatestBlocks = () => {
   }
 
   return (
-    <Box width={{ base: '100%', lg: '280px' }} flexShrink={ 0 }>
+    <Box
+      width={{ base: '100%', lg: '280px' }}
+      flexShrink={ 0 }
+      p="4"
+      borderRadius={ 8 }
+      boxShadow="lg"
+    >
       <Heading as="h4" size="sm">Latest blocks</Heading>
       { statsQueryResult.data?.network_utilization_percentage !== undefined && (
         <Skeleton isLoaded={ !statsQueryResult.isPlaceholderData } mt={ 1 } display="inline-block">

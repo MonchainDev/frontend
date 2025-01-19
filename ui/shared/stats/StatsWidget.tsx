@@ -52,7 +52,7 @@ const StatsWidget = ({
   period,
   href,
 }: Props) => {
-  const bgColor = useColorModeValue('gray.50', 'whiteAlpha.100');
+  const bgColor = useColorModeValue('transparent', 'whiteAlpha.100');
   const skeletonBgColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.50');
   const hintColor = useColorModeValue('gray.600', 'gray.400');
 
@@ -62,8 +62,9 @@ const StatsWidget = ({
         className={ className }
         alignItems="center"
         bgColor={ isLoading ? skeletonBgColor : bgColor }
-        p={ 3 }
-        borderRadius="base"
+        paddingX={ 6 }
+        paddingY={ 10 }
+        // borderRadius="base"
         justifyContent="space-between"
         columnGap={ 2 }
         { ...(href && !isLoading ? {
