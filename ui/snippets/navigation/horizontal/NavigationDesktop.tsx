@@ -22,6 +22,7 @@ const NavigationDesktop = () => {
       borderBottomWidth="1px"
       zIndex={ 1 }
       position="relative"
+      background="rgba(6,6,6,1)"
     >
       <Flex
         display={{ base: 'none', lg: 'flex' }}

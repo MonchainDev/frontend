@@ -11,7 +11,7 @@ import * as Layout from './components';
 
 const LayoutDefault = ({ children }: Props) => {
   return (
-    <Layout.Container>
+    <Layout.Container position="relative">
       <Layout.TopRow/>
       <Layout.NavBar/>
       <HeaderMobile/>

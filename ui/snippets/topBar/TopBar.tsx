@@ -1,20 +1,20 @@
-import { Flex, Divider, useColorModeValue, Box } from '@chakra-ui/react';
+import { useColorModeValue, Box } from '@chakra-ui/react';
 import React from 'react';
 
-import config from 'configs/app';
-import { CONTENT_MAX_WIDTH } from 'ui/shared/layout/utils';
+// import config from 'configs/app';
+// import { CONTENT_MAX_WIDTH } from 'ui/shared/layout/utils';
 
-import DeFiDropdown from './DeFiDropdown';
-import NetworkMenu from './NetworkMenu';
-import Settings from './settings/Settings';
-import TopBarStats from './TopBarStats';
+// import DeFiDropdown from './DeFiDropdown';
+// import NetworkMenu from './NetworkMenu';
+// import Settings from './settings/Settings';
+// import TopBarStats from './TopBarStats';
 
 const TopBar = () => {
   const bgColor = useColorModeValue('transparent', 'whiteAlpha.100');
 
   return (
     <Box bgColor={ bgColor } zIndex={ 2 } position="relative">
-      <Flex
+      { /* <Flex
         py={ 2 }
         px={{ base: 3, lg: 6 }}
         maxW={ `${ CONTENT_MAX_WIDTH }px` }
@@ -38,7 +38,7 @@ const TopBar = () => {
             </Box>
           ) }
         </Flex>
-      </Flex>
+      </Flex> */ }
     </Box>
   );
 };
