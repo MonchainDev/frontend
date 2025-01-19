@@ -65,7 +65,7 @@ const NavLinkGroup = ({ item }: Props) => {
 
                     return (
                       <chakra.ul key={ index } display="flex" flexDir="column" rowGap={ 1 }>
-                        { subItem.map((navItem) => <NavLink key={ navItem.text } item={ navItem }/>) }
+                        { subItem.map((navItem) => <NavLink key={ navItem.text } item={ navItem } textColor="blackAlpha.900"/>) }
                       </chakra.ul>
                     );
                   }) }
@@ -76,7 +76,7 @@ const NavLinkGroup = ({ item }: Props) => {
                     if (Array.isArray(subItem)) {
                       return null;
                     }
-                    return <NavLink key={ subItem.text } item={ subItem }/>;
+                    return <NavLink key={ subItem.text } item={ subItem }textColor="blackAlpha.900"/>;
                   }) }
                 </chakra.ul>
               ) }
