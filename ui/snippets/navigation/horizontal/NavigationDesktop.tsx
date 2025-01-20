@@ -49,7 +49,7 @@ const NavigationDesktop = () => {
           { config.features.rewards.isEnabled && <RewardsButton size="sm"/> }
           {
             (config.features.account.isEnabled && <UserProfileDesktop buttonSize="sm"/>) ||
-            (config.features.blockchainInteraction.isEnabled && <UserWalletDesktop buttonSize="sm"/>)
+            (config.features.blockchainInteraction.isEnabled && <UserWalletDesktop buttonSize="sm" buttonVariant="ghost"/>)
           }
         </Flex>
       </Flex>
