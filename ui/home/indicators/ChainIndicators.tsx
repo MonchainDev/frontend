@@ -92,6 +92,8 @@ const ChainIndicators = () => {
       flexBasis="50%"
       flexGrow={ 1 }
       alignItems="stretch"
+      mt={{ base: 6, lg: 0 }}
+      boxShadow="rgba(17, 12, 46, 0.15) 0px 10px 64px 0px;"
     >
       <Flex flexGrow={ 1 } flexDir="column">
         <Flex alignItems="center">

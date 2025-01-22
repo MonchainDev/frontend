@@ -18,7 +18,7 @@ type Props = {
 };
 
 const HeaderMobile = ({ hideSearchBar, renderSearchBar }: Props) => {
-  const bgColor = useColorModeValue('white', 'black');
+  const bgColor = useColorModeValue('linear-gradient(95.92deg, #08070E 25.38%, #423A74 100%)', 'rgb(245,245,245)');
   const scrollDirection = useScrollDirection();
   const { ref, inView } = useInView({ threshold: 1 });
 
@@ -27,7 +27,7 @@ const HeaderMobile = ({ hideSearchBar, renderSearchBar }: Props) => {
   return (
     <Box
       ref={ ref }
-      bgColor={ bgColor }
+      bg="transparent"
       display={{ base: 'block', lg: 'none' }}
       position="sticky"
       top="-1px"
@@ -38,13 +38,14 @@ const HeaderMobile = ({ hideSearchBar, renderSearchBar }: Props) => {
       <Flex
         as="header"
         paddingX={ 3 }
-        paddingY={ 2 }
-        bgColor={ bgColor }
+        paddingY={ 4 }
+        bg={ bgColor }
         width="100%"
         alignItems="center"
         transitionProperty="box-shadow"
         transitionDuration="slow"
         boxShadow={ !inView && scrollDirection === 'down' ? 'md' : 'none' }
+        zIndex={ 1 }
       >
         <Burger/>
         <NetworkLogo ml={ 2 } mr="auto"/>

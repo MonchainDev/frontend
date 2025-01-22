@@ -26,7 +26,7 @@ const UserWalletMenuContent = ({ isAutoConnectDisabled, address, domain, isRecon
   return (
     <Box>
       { isAutoConnectDisabled && <UserWalletAutoConnectAlert/> }
-      <Text fontSize="sm" fontWeight={ 600 } mb={ 1 }>My wallet</Text>
+      <Text fontSize="sm" fontWeight={ 600 } mb={ 1 } color="gray.50">My wallet</Text>
       <Text fontSize="sm" mb={ 5 } fontWeight={ 400 } color="text_secondary">
         Your wallet is used to interact with apps and contracts in the explorer.
       </Text>

@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 
 import type { Props } from './types';
@@ -11,14 +12,17 @@ import * as Layout from './components';
 const LayoutHome = ({ children }: Props) => {
   return (
     <Layout.Container>
-      <div style={{
-        position: 'absolute',
-        height: 512,
-        width: '100%',
-        background: 'linear-gradient(0deg, rgba(208,139,254,1) 0%, rgba(49,4,194,1) 11%, rgba(6,6,6,1) 57%)',
-        zIndex: 0,
-      }}>
-      </div>
+      <Box
+        position="absolute"
+        height={{ base: 164, lg: 512 }}
+        width="100%"
+        zIndex={ 0 }
+        background={{
+          base: 'linear-gradient(95.92deg, #08070E 25.38%, #423A74 100%)',
+          lg: 'linear-gradient(0deg, rgba(208,139,254,1) 0%, rgba(49,4,194,1) 11%, rgba(6,6,6,1) 57%)',
+        }}
+      >
+      </Box>
       <Layout.TopRow/>
       <Layout.NavBar/>
       <HeaderMobile hideSearchBar/>

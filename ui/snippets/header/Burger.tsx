@@ -15,7 +15,7 @@ interface Props {
 }
 
 const Burger = ({ isMarketplaceAppPage }: Props) => {
-  const iconColor = useColorModeValue('gray.600', 'white');
+  const iconColor = useColorModeValue('gray.400', 'white');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const networkMenu = useNetworkMenu();
 
@@ -30,7 +30,7 @@ const Burger = ({ isMarketplaceAppPage }: Props) => {
 
   return (
     <>
-      <Box padding={ 2 } onClick={ onOpen } cursor="pointer">
+      <Box paddingX={ 1 } onClick={ onOpen } cursor="pointer">
         <IconSvg
           name="burger"
           boxSize={ 6 }
@@ -46,7 +46,7 @@ const Burger = ({ isMarketplaceAppPage }: Props) => {
         autoFocus={ false }
       >
         <DrawerOverlay/>
-        <DrawerContent maxWidth="330px">
+        <DrawerContent maxWidth="330px" background="gray.900">
           <DrawerBody p={ 6 } display="flex" flexDirection="column">
             <TestnetBadge alignSelf="flex-start"/>
             <Flex alignItems="center" justifyContent="space-between">

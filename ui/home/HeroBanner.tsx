@@ -48,13 +48,13 @@ const HeroBanner = () => {
       // background={ background }
       border={ border }
       borderRadius="md"
-      p={{ base: 4, lg: 8 }}
-      paddingX={{ base: 40, lg: 40 }}
+      p={{ base: 0, lg: 8 }}
+      paddingX={{ base: 0, lg: 40 }}
       columnGap={ 8 }
       alignItems="center"
     >
       <Box flexGrow={ 1 }>
-        <Flex mb={{ base: 6, lg: 9 }} justifyContent="center" alignItems="center" columnGap={ 2 }>
+        <Flex mb={{ base: 0, lg: 9 }} justifyContent="center" alignItems="center" columnGap={ 2 }>
           <Heading
             as="h1"
             fontSize={{ base: '40px', lg: '40px' }}
@@ -67,11 +67,10 @@ const HeroBanner = () => {
               WebkitTextFillColor: 'transparent',
               WebkitBackgroundClip: 'text',
             }}
+            display={{ base: 'none', lg: 'block' }}
           >
             {
-              config.meta.seo.enhancedDataEnabled ?
-                `${ config.chain.name } blockchain explorer` :
-                `Explore ${ config.chain.name }`
+              `Explore ${ config.chain.name }`
             }
           </Heading>
           { config.UI.navigation.layout === 'vertical' && (

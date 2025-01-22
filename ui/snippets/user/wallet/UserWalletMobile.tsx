@@ -32,7 +32,7 @@ const UserWalletMobile = () => {
   return (
     <>
       <UserWalletButton
-        variant="header"
+        variant="link"
         onClick={ web3Wallet.isConnected ? walletMenu.onOpen : web3Wallet.openModal }
         address={ web3AccountWithDomain.address }
         domain={ web3AccountWithDomain.domain }
@@ -46,7 +46,7 @@ const UserWalletMobile = () => {
           autoFocus={ false }
         >
           <DrawerOverlay/>
-          <DrawerContent maxWidth="300px">
+          <DrawerContent maxWidth="300px" background="gray.900">
             <DrawerBody p={ 6 }>
               <UserWalletMenuContent
                 address={ web3AccountWithDomain.address }

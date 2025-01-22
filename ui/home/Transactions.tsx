@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import React from 'react';
 
 import config from 'configs/app';
@@ -36,10 +36,10 @@ const TransactionsHome = () => {
   }
 
   return (
-    <>
+    <Box>
       <Heading as="h4" size="sm" mb={ 3 }>Latest transactions</Heading>
       <LatestTxs/>
-    </>
+    </Box>
   );
 };
 
